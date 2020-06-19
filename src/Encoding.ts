@@ -35,7 +35,8 @@ class Encoding {
     const mapped = this.unicodeMappings[codePoint];
     if (!mapped) {
       const str = String.fromCharCode(codePoint);
-      const msg = `${this.name} cannot encode "${str}" (0x${codePoint.toString(16).padStart(2, '0')})`;
+      const charRef = ('000' + codePoint.toString(16)).slice(-4);
+      const msg = `${this.name} cannot encode "${str}" (0x${charRef})`;
       throw new Error(msg);
     }
     return { code: mapped[0], name: mapped[1] };
