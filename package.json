@@ -32,7 +32,7 @@
   "license": "MIT",
   "homepage": "https://github.com/Hopding/standard-fonts",
   "dependencies": {
-    "pako": "^1.0.6"
+    "pako": "^2.0.3"
   },
   "devDependencies": {
     "@types/mz": "^0.0.32",
